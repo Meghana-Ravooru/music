@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="utf-8">
+     <title>Music</title>
+     <link rel="stylesheet" href="music.css">
+</head>
+<body>
+       <div class="container">
+         <div class="navbar">
+           <img src="logo.jpg" class="logo" style="width:100px">
+           <ul>
+             <li><a href="#">Home</a></li>
+             <li><a href="#">Favourites</a></a></li>
+             <li><a href="#">Playlists</a></li>
+             <li><a href="#">Downloads</a></li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="left-col">
+            <h1> THE<br> SOUL<br> MUSIC</h1>
+          </div>
+          <div class="right-col">
+            <p>Click Here To Listen</p>
+            <img src="play.jpg" id="icon"  style="width:90px">
+          </div>
+        </div>
+      </div>
+      <audio id="song">
+        <source src="audio.mp3" type="audio/mp3">
+      </audio>
+<script>
+     var song=document.getElementById("song");
+     var icon=document.getElementById("icon");
+     icon.onclick=function()
+     {
+       if(song.paused){
+         song.play();
+         icon.src="pause.jpg";
+         }
+      else{
+        song.pause();
+        icon.src="play.jpg";
+        }
+      }
+
+</script>
+</body>
+</html>
